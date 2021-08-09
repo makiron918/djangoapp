@@ -21,4 +21,4 @@ from django.conf import settings
 urlpatterns = [
     url(r'^posts/', include('posts.urls')),
     url(r'^admin/', admin.site.urls),
-] + statis(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
