@@ -21,4 +21,5 @@ from django.conf import settings
 urlpatterns = [
     url(r'^posts/', include('posts.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^posts/(?P<post_id>[0-9]+)/$', posts.view.post_detail, name="post_detail")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
